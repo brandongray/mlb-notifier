@@ -23,7 +23,7 @@ jobs:
         pip install -r requirements.txt
     - name: Run Application
       run: |
-        python main.py
+        python cubs_schedule.py
       env:
         DESTINATIONS: ${{ secrets.DESTINATIONS }}
         SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}
