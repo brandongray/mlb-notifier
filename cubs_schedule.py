@@ -22,7 +22,7 @@ to_zone = tz.gettz("America/Chicago")
 for game in games:
     dt = datetime.datetime.strptime(game["game_datetime"], "%Y-%m-%dT%H:%M:%SZ")
     time = dt.replace(tzinfo=from_zone).astimezone(to_zone).strftime('%I:%M %p')
-    message = "{} @ {}".format(game["summary"], time)
+    message = "{} at {}".format(game["summary"], time)
     
     email_message = Mail(
         from_email=from_email,
